@@ -1,11 +1,19 @@
-## Issue
+## 🔥 Related Issues
+- Resolved: #IssueNumber
 
-Resolves #(이슈 번호)
+## 💜 작업 내용
+- [x] ~ 기능 구현
+- [x] ~ 페이지 구조화 및 스타일링
 
-## Description
+## ✅ PR Point
+- 무슨 이유로 어떻게 코드를 변경했는지
+- 어떤 위험이나 우려가 발견되었는지
+- 어떤 부분에 리뷰어가 집중해야 하는지
 
-## Check List
+## 😡 Trouble Shooting
+- 어떤 어려움이 있었고 어떻게 해결했는지
 
-- [ ] PR 제목을 커밋 규칙에 맞게 작성
-- [ ] 작업한 사람 모두를 Assign
-- [ ] `main` 브랜치의 최신 상태를 반영하고 있는지 확인
+## ☀️ 스크린샷 / GIF / 화면 녹화 
+
+## 📚 Reference
+- 구현에 참고한 링크 (필요한 경우만 작성하고 없으면 지우기)
