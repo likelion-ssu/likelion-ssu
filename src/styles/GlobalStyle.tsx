@@ -71,6 +71,8 @@ const GlobalStyleComponent = createGlobalStyle`
   textarea,
   select {
     font: inherit;
+    border: none;
+    background-color: transparent;
   }
   p,
   h1,
