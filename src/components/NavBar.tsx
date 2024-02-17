@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/Recruit/logo-blue.png";
 
 const NavBar = () => {
   const navigate = useNavigate();
