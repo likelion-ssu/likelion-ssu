@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { mq } from './token';
+import { mq } from "./token";
 
 export const GlobalStyle = () => {
   return <GlobalStyleComponent />;
@@ -13,10 +13,15 @@ const GlobalStyleComponent = createGlobalStyle`
     flex-shrink: 0;
   }
   * {
+  box-sizing: border-box;
+    padding: 0;
     margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
   }
   html {
     font-family: 'SUIT Variable', sans-serif;
+    font-size: 62.5%;
   }
   html,
   body {
@@ -36,6 +41,22 @@ const GlobalStyleComponent = createGlobalStyle`
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family:
+      'Pretendard Variable',
+      Pretendard,
+      -apple-system,
+      BlinkMacSystemFont,
+      system-ui,
+      Roboto,
+      'Helvetica Neue',
+      'Segoe UI',
+      'Apple SD Gothic Neo',
+      'Noto Sans KR',
+      'Malgun Gothic',
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol',
+      sans-serif;
   }
   img,
   picture,
@@ -63,5 +84,11 @@ const GlobalStyleComponent = createGlobalStyle`
   #root,
   #__next {
     isolation: isolate;
+  }
+  #root {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 `;
