@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, News, Project, Recruit, ColorChange } from './pages';
-import React from 'react';
 
 function App() {
   return (

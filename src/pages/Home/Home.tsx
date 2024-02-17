@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import styled from "styled-components";
 import main from "../../assets/Home/mainBG.png";
-import React from 'react';
 
 export const Home = () => {
   return (
