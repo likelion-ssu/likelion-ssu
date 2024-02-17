@@ -7,12 +7,8 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
 
-  const handleClickHomeBtn = () => {
-    navigate("/");
-  };
-
   const handleClickBtn = (
-    selected: "project" | "story" | "recruit" | "faq"
+    selected: "home" | "project" | "story" | "recruit" | "faq"
   ) => {
     setSelectedBtn(selected);
     navigate(`/${selected}`);
@@ -20,37 +16,41 @@ const NavBar = () => {
 
   return (
     <StNavContainer>
-      <StLogoWrapper onClick={handleClickHomeBtn}>
-        <img src={logo} alt="Logo" />
-      </StLogoWrapper>
       <StNavWrapper>
+        <StNavBtn
+          type="button"
+          isSelected={selectedBtn === "home"}
+          onClick={() => handleClickBtn("home")}
+        >
+          HOME
+        </StNavBtn>
         <StNavBtn
           type="button"
           isSelected={selectedBtn === "project"}
           onClick={() => handleClickBtn("project")}
         >
-          프로젝트
+          PROJECT
         </StNavBtn>
         <StNavBtn
           type="button"
           isSelected={selectedBtn === "story"}
           onClick={() => handleClickBtn("story")}
         >
-          스토리
+          STORY
         </StNavBtn>
         <StNavBtn
           type="button"
           isSelected={selectedBtn === "recruit"}
           onClick={() => handleClickBtn("recruit")}
         >
-          리쿠르팅
+          RECRUIT
         </StNavBtn>
         <StNavBtn
           type="button"
           isSelected={selectedBtn === "faq"}
           onClick={() => handleClickBtn("faq")}
         >
-          자주 묻는 질문
+          FAQ
         </StNavBtn>
       </StNavWrapper>
     </StNavContainer>
@@ -60,39 +60,35 @@ const NavBar = () => {
 export default NavBar;
 
 const StNavContainer = styled.div`
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 9rem;
+  height: 8rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-`;
-
-const StLogoWrapper = styled.button`
-  width: 9rem;
-  height: 4rem;
+  background: linear-gradient(180deg, #3383fe 0%, rgba(51, 131, 254, 0) 100%);
 `;
 
 const StNavWrapper = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  padding-left: 2rem;
-  gap: 1.5rem;
+  width: 50%;
+  gap: 3rem;
 `;
 
 const StNavBtn = styled.button<{ isSelected: boolean }>`
-  color: ${({ isSelected }) => (isSelected ? "#7a7a7a" : "#909090")};
+  color: ${({ isSelected }) => (isSelected ? "#FFFFFF" : "#EBF7FF")};
   font-size: 1.5rem;
-  font-weight: ${({ isSelected }) => (isSelected ? 700 : 500)};
+  font-weight: 600;
   line-height: normal;
+  border-bottom: ${({ isSelected }) =>
+    isSelected ? "0.3rem solid #FFFFFF" : "none"};
 
   &:hover {
-    color: #7a7a7a;
-    font-size: 1.5rem;
-    font-weight: 700;
     cursor: pointer;
   }
 `;
