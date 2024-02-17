@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import { mq } from './token';
-import React from "react";
 
 export const GlobalStyle = () => {
   return <GlobalStyleComponent />;
