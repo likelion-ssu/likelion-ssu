@@ -5,7 +5,6 @@ import logo from "../assets/Recruit/logo-blue.png";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const [isSelected, setIsSelected] = useState<boolean>("");
   const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
 
   const handleClickBtn = (
