@@ -7,6 +7,10 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
 
+  const handleClickHomeBtn = () => {
+    navigate("/");
+  };
+
   const handleClickBtn = (
     selected: "project" | "story" | "recruit" | "faq"
   ) => {
@@ -16,7 +20,7 @@ const NavBar = () => {
 
   return (
     <StNavContainer>
-      <StLogoWrapper>
+      <StLogoWrapper onClick={handleClickHomeBtn}>
         <img src={logo} alt="Logo" />
       </StLogoWrapper>
       <StNavWrapper>
