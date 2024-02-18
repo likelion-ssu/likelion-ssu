@@ -62,12 +62,12 @@ const StNavContainer = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  height: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #3383fe 0%, rgba(51, 131, 254, 0) 100%);
+  padding: 2.5% 0%;
+  background: #ffffff;
 `;
 
 const StNavWrapper = styled.div`
@@ -75,17 +75,16 @@ const StNavWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  gap: 3rem;
+  gap: 5vw;
 `;
 
 const StNavBtn = styled.button<{ isSelected: boolean }>`
-  color: ${({ isSelected }) => (isSelected ? "#FFFFFF" : "#EBF7FF")};
-  font-size: 1.5rem;
+  color: ${({ isSelected }) => (isSelected ? "#665a5a" : "black")};
+  font-size: 1.8vw;
   font-weight: 600;
   line-height: normal;
   border-bottom: ${({ isSelected }) =>
-    isSelected ? "0.3rem solid #FFFFFF" : "none"};
+    isSelected ? "0.2rem solid #262323" : "none"};
 
   &:hover {
     cursor: pointer;

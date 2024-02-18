@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { mq } from "./token";
+import BowlbyOne from "../assets/fonts/BowlbyOneSC-Regular.ttf";
 
 export const GlobalStyle = () => {
   return <GlobalStyleComponent />;
@@ -38,6 +39,10 @@ const GlobalStyleComponent = createGlobalStyle`
       font-size: 10px;
     }
   }
+  @font-face {
+	font-family: "BowlbyOne";
+	src: url(${BowlbyOne});
+}
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -56,7 +61,8 @@ const GlobalStyleComponent = createGlobalStyle`
       'Apple Color Emoji',
       'Segoe UI Emoji',
       'Segoe UI Symbol',
-      sans-serif;
+      sans-serif,
+      "BowlbyOne";
   }
   img,
   picture,
@@ -92,5 +98,8 @@ const GlobalStyleComponent = createGlobalStyle`
     height: calc(var(--vh, 1vh) * 100);
     min-height: 100vh;
     overflow-x: hidden;
+  }
+  span {
+    white-space: pre-line;
   }
 `;
