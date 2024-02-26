@@ -304,8 +304,13 @@ export const Home = () => {
               <MemberRole>기획 파트장</MemberRole>
             </Member>
             <Member>
+<<<<<<< HEAD
               <MemberImg src={hi} />
               <MemberName>이해인</MemberName>
+=======
+              <MemberImg src={hi}/>
+              <MemberName>유해인</MemberName>
+>>>>>>> main
               <MemberRole>디자인 파트장</MemberRole>
             </Member>
             <Member>

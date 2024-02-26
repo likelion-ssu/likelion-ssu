@@ -1,5 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+<<<<<<< HEAD
 import { Home, Recruit, Faq } from "./pages";
+=======
+import { Faq, Home, Recruit } from "./pages";
+>>>>>>> main
 
 function App() {
   return (
@@ -10,6 +14,10 @@ function App() {
         {/*<Route path="/project" element={<Project />} />*/}
         <Route path="/recruit" element={<Recruit />} />
         <Route path="/faq" element={<Faq />} />
+<<<<<<< HEAD
+=======
+        <Route path="/*" element={<Home />} />
+>>>>>>> main
       </Routes>
     </BrowserRouter>
   );
