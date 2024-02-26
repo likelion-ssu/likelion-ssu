@@ -90,6 +90,7 @@ const StRecruitContainer = styled.div`
 `;
 
 const StNavBar = styled.div`
+  z-index: 999;
   position: fixed;
   top: 0;
 `;
