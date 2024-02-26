@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import bluelogo from "../assets/Recruit/logo-blue.png";
@@ -7,12 +7,9 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [selectedBtn, setSelectedBtn] = useState<string>("");
 
-  useEffect(() => {
-    navigate(`/${selectedBtn}`);
-  }, [selectedBtn, navigate]);
-
   const handleClickBtn = (selected: "" | "recruit" | "faq") => {
     setSelectedBtn(selected);
+    navigate(`/${selected}`);
   };
 
   return (
@@ -75,8 +72,8 @@ const StNavBtn = styled.button<{ $isSelected: boolean }>`
   font-size: 1.8vw;
   font-weight: 600;
   line-height: normal;
-  border-bottom: ${({ $isSelected }) =>
-    $isSelected ? "0.2rem solid #262323" : "none"};
+  /* border-bottom: ${({ $isSelected }) =>
+    $isSelected ? "0.2rem solid #262323" : "none"}; */
 
   &:hover {
     cursor: pointer;

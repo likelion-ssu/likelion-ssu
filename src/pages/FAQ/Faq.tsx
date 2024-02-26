@@ -21,10 +21,12 @@ export const Faq = () => {
 
 const StFaqContainer = styled.div`
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   margin-top: 7%;
   padding-bottom: 30%;
+  background-color: #f4f8ff;
 `;
 
 const StNavBar = styled.div`
