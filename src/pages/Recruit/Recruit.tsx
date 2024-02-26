@@ -98,6 +98,7 @@ const StRecruitContainer = styled.div`
 const StNavBar = styled.div`
   position: fixed;
   top: 0;
+  z-index: 999;
 `;
 
 const StRecruitTypoWrapper = styled.div`
