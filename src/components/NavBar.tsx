@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import bluelogo from "../assets/Recruit/logo-blue.png";
@@ -7,9 +7,12 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [selectedBtn, setSelectedBtn] = useState<string>("");
 
-  const handleClickBtn = (selected: "home" | "recruit" | "faq") => {
+  useEffect(() => {
+    navigate(`/${selectedBtn}`);
+  }, [selectedBtn, navigate]);
+
+  const handleClickBtn = (selected: "" | "recruit" | "faq") => {
     setSelectedBtn(selected);
-    navigate(`/${selected}`);
   };
 
   return (
@@ -18,8 +21,8 @@ const NavBar = () => {
       <StNavWrapper>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === "home"}
-          onClick={() => handleClickBtn("home")}
+          isSelected={selectedBtn === ""}
+          onClick={() => handleClickBtn("")}
         >
           HOME
         </StNavBtn>
