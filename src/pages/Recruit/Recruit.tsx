@@ -1,7 +1,5 @@
-import { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
-import { useNavigate } from "react-router-dom";
 // import { motion } from "framer-motion";
 import {
   banner,
@@ -22,20 +20,16 @@ import logo from "../../assets/logo.png";
 import AboutUs from "../../components/AboutUs";
 
 export const Recruit = () => {
-  const navigate = useNavigate();
-  const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
-
   const handleClickBtn = () => {};
 
   const onClickApplyBtn = () => {
-    setSelectedBtn("faq");
-    navigate("/faq");
+    window.open("https://forms.gle/865t3KhNBq58zz4Y7");
   };
 
   return (
     <StRecruitContainer>
       <StNavBar>
-        <NavBar selectedBtn={selectedBtn} />
+        <NavBar />
       </StNavBar>
       <img src={banner} alt="Banner" />
       <StRecruitTypoWrapper>

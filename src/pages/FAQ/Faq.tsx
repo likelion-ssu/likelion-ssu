@@ -1,15 +1,12 @@
-import { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 import { banner } from "../../assets/Recruit";
 
 export const Faq = () => {
-  const [selectedBtn] = useState<string>("faq");
-
   return (
     <StFaqContainer>
       <StNavBar>
-        <NavBar selectedBtn={selectedBtn} />
+        <NavBar />
       </StNavBar>
       <img src={banner} alt="Banner" />
       <StRecruitTypoWrapper>
