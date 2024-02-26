@@ -1,20 +1,20 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import bluelogo from "../assets/Recruit/logo-blue.png";
 
 const NavBar = () => {
   const navigate = useNavigate();
   const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
 
-  const handleClickBtn = (
-    selected: "home" | "project" | "story" | "recruit" | "faq"
-  ) => {
+  const handleClickBtn = (selected: "home" | "recruit" | "faq") => {
     setSelectedBtn(selected);
     navigate(`/${selected}`);
   };
 
   return (
     <StNavContainer>
+      <StNavLogo src={bluelogo} alt="logo_blue" />
       <StNavWrapper>
         <StNavBtn
           type="button"
@@ -22,20 +22,6 @@ const NavBar = () => {
           onClick={() => handleClickBtn("home")}
         >
           HOME
-        </StNavBtn>
-        <StNavBtn
-          type="button"
-          isSelected={selectedBtn === "project"}
-          onClick={() => handleClickBtn("project")}
-        >
-          PROJECT
-        </StNavBtn>
-        <StNavBtn
-          type="button"
-          isSelected={selectedBtn === "story"}
-          onClick={() => handleClickBtn("story")}
-        >
-          STORY
         </StNavBtn>
         <StNavBtn
           type="button"
@@ -64,10 +50,13 @@ const StNavContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding: 2.5% 0%;
   background: #ffffff;
+`;
+
+const StNavLogo = styled.img`
+  width: 8vw;
 `;
 
 const StNavWrapper = styled.div`
@@ -76,6 +65,7 @@ const StNavWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5vw;
+  padding: 2.5% 0%;
 `;
 
 const StNavBtn = styled.button<{ isSelected: boolean }>`

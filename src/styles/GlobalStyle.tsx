@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { mq } from "./token";
-import BowlbyOne from "../assets/fonts/BowlbyOneSC-Regular.ttf";
+import BowlbyOne from "../assets/fonts/BowlbyOne-Regular.ttf";
 
 export const GlobalStyle = () => {
   return <GlobalStyleComponent />;
@@ -94,7 +94,7 @@ const GlobalStyleComponent = createGlobalStyle`
     isolation: isolate;
   }
   #root {
-    width: 100vw;
+    width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     min-height: 100vh;
     overflow-x: hidden;
