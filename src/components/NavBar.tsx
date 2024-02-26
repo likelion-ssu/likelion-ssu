@@ -21,21 +21,21 @@ const NavBar = () => {
       <StNavWrapper>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === ""}
+          $isSelected={selectedBtn === ""}
           onClick={() => handleClickBtn("")}
         >
           HOME
         </StNavBtn>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === "recruit"}
+          $isSelected={selectedBtn === "recruit"}
           onClick={() => handleClickBtn("recruit")}
         >
           RECRUIT
         </StNavBtn>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === "faq"}
+          $isSelected={selectedBtn === "faq"}
           onClick={() => handleClickBtn("faq")}
         >
           FAQ
@@ -70,13 +70,13 @@ const StNavWrapper = styled.div`
   padding: 2.5% 0%;
 `;
 
-const StNavBtn = styled.button<{ isSelected: boolean }>`
-  color: ${({ isSelected }) => (isSelected ? "#665a5a" : "black")};
+const StNavBtn = styled.button<{ $isSelected: boolean }>`
+  color: ${({ $isSelected }) => ($isSelected ? "#665a5a" : "black")};
   font-size: 1.8vw;
   font-weight: 600;
   line-height: normal;
-  border-bottom: ${({ isSelected }) =>
-    isSelected ? "0.2rem solid #262323" : "none"};
+  border-bottom: ${({ $isSelected }) =>
+    $isSelected ? "0.2rem solid #262323" : "none"};
 
   &:hover {
     cursor: pointer;

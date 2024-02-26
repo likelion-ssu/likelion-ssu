@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 // import { motion } from "framer-motion";
@@ -7,6 +8,9 @@ import {
   passion,
   cooperation,
   responsibility,
+  passionblue,
+  cooperationblue,
+  responsibilityblue,
   roadmap0,
   roadmap1,
 } from "../../assets/Recruit/index";
@@ -20,7 +24,11 @@ import logo from "../../assets/logo.png";
 import AboutUs from "../../components/AboutUs";
 
 export const Recruit = () => {
-  const handleClickBtn = () => {};
+  const [selectedTalent, setSelectedTalent] = useState<string | null>(null);
+
+  const handleTalentClick = (talent: string) => {
+    setSelectedTalent(talent);
+  };
 
   const onClickApplyBtn = () => {
     window.open("https://forms.gle/865t3KhNBq58zz4Y7");
@@ -55,14 +63,33 @@ export const Recruit = () => {
           숭실대 멋쟁이 사자처럼은 이런 사람을 원해요
         </StInfoSubtitle>
         <StTalentedWrapper>
-          <StTalentedBtn onClick={handleClickBtn}>
-            <img src={passion} />
+          <StTalentedBtn
+            onClick={() => handleTalentClick("passion")}
+            $isSelected={selectedTalent === "passion"}
+          >
+            <img src={selectedTalent === "passion" ? passionblue : passion} />
           </StTalentedBtn>
-          <StTalentedBtn onClick={handleClickBtn}>
-            <img src={cooperation} />
+          <StTalentedBtn
+            onClick={() => handleTalentClick("cooperation")}
+            $isSelected={selectedTalent === "cooperation"}
+          >
+            <img
+              src={
+                selectedTalent === "cooperation" ? cooperationblue : cooperation
+              }
+            />
           </StTalentedBtn>
-          <StTalentedBtn onClick={handleClickBtn}>
-            <img src={responsibility} />
+          <StTalentedBtn
+            onClick={() => handleTalentClick("responsibility")}
+            $isSelected={selectedTalent === "responsibility"}
+          >
+            <img
+              src={
+                selectedTalent === "responsibility"
+                  ? responsibilityblue
+                  : responsibility
+              }
+            />
           </StTalentedBtn>
         </StTalentedWrapper>
       </StRecruitInfoWrapper>
@@ -180,7 +207,7 @@ const StTalentedWrapper = styled.div`
   gap: 8vw;
 `;
 
-const StTalentedBtn = styled.button`
+const StTalentedBtn = styled.button<{ $isSelected: boolean }>`
   width: 20vw;
   height: 20vw;
 `;

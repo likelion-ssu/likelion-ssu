@@ -3,6 +3,9 @@ import process from "./process.png";
 import passion from "./passion.png";
 import cooperation from "./cooperation.png";
 import responsibility from "./responsibility.png";
+import passionblue from "./passion-blue.png";
+import cooperationblue from "./cooperation-blue.png";
+import responsibilityblue from "./responsibility-blue.png";
 import gidi0 from "./gidi0.png";
 import gidi1 from "./gidi1.png";
 import gidi2 from "./gidi2.png";
@@ -24,6 +27,9 @@ export {
   passion,
   cooperation,
   responsibility,
+  passionblue,
+  cooperationblue,
+  responsibilityblue,
   gidi0,
   gidi1,
   gidi2,
