@@ -9,7 +9,6 @@ function App() {
         {/*<Route path="/news" element={<News />} />*/}
         {/*<Route path="/project" element={<Project />} />*/}
         <Route path="/recruit" element={<Recruit />} />
-        {/*<Route path="/colorchange" element={<ColorChange />} />*/}
       </Routes>
     </BrowserRouter>
   );

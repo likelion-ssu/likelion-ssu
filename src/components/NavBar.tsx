@@ -1,52 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import bluelogo from "../assets/Recruit/logo-blue.png";
 
-const NavBar = () => {
+interface NavBarProps {
+  selectedBtn: string;
+}
+
+const NavBar = ({ selectedBtn }: NavBarProps) => {
   const navigate = useNavigate();
-  const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
+  const [isSelectedBtn, setIsSelectedBtn] = useState<string>(
+    selectedBtn || "recruit"
+  );
 
-  const handleClickBtn = (
-    selected: "" | "project" | "story" | "recruit" | "faq"
-  ) => {
-    setSelectedBtn(selected);
+  useEffect(() => {
+    setIsSelectedBtn(selectedBtn || "recruit");
+  }, [selectedBtn]);
+
+  const handleClickBtn = (selected: "" | "recruit" | "faq") => {
+    setIsSelectedBtn(selected);
     navigate(`/${selected}`);
   };
 
+  useEffect(() => {
+    setIsSelectedBtn(selectedBtn);
+  }, [selectedBtn]);
+
   return (
     <StNavContainer>
+      <StNavLogo src={bluelogo} alt="logo_blue" />
       <StNavWrapper>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === "home"}
+          isSelected={isSelectedBtn === "home"}
           onClick={() => handleClickBtn("")}
         >
           HOME
         </StNavBtn>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === "project"}
-          onClick={() => handleClickBtn("project")}
-        >
-          PROJECT
-        </StNavBtn>
-        <StNavBtn
-          type="button"
-          isSelected={selectedBtn === "story"}
-          onClick={() => handleClickBtn("story")}
-        >
-          STORY
-        </StNavBtn>
-        <StNavBtn
-          type="button"
-          isSelected={selectedBtn === "recruit"}
+          isSelected={isSelectedBtn === "recruit"}
           onClick={() => handleClickBtn("recruit")}
         >
           RECRUIT
         </StNavBtn>
         <StNavBtn
           type="button"
-          isSelected={selectedBtn === "faq"}
+          isSelected={isSelectedBtn === "faq"}
           onClick={() => handleClickBtn("faq")}
         >
           FAQ
@@ -64,18 +64,21 @@ const StNavContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding: 2.5% 0%;
   background: #ffffff;
+`;
+
+const StNavLogo = styled.img`
+  width: 7vw;
 `;
 
 const StNavWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: 5vw;
+  gap: 7vw;
+  padding: 2.5% 0%;
 `;
 
 const StNavBtn = styled.button<{ isSelected: boolean }>`

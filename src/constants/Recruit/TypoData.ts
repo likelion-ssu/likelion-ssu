@@ -5,3 +5,6 @@ export const content =
 
 export const finishment =
   "아기사자로써 함께 성장하고 싶으시다면 지금 바로 지원해 주세요!";
+
+export const linksubtitle =
+  "Possibility to Reality\n 내 아이디어를 내 손으로 실현하자!";

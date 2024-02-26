@@ -1,14 +1,41 @@
+import { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
-import banner from "../../assets/Recruit/banner.png";
-import process from "../../assets/Recruit/process.png";
-import { title, content, finishment } from "../../constants/Recruit/TypoData";
+import { useNavigate } from "react-router-dom";
+// import { motion } from "framer-motion";
+import {
+  banner,
+  process,
+  passion,
+  cooperation,
+  responsibility,
+  roadmap0,
+  roadmap1,
+} from "../../assets/Recruit/index";
+import {
+  title,
+  content,
+  finishment,
+  linksubtitle,
+} from "../../constants/Recruit/TypoData";
+import logo from "../../assets/logo.png";
+import AboutUs from "../../components/AboutUs";
 
 export const Recruit = () => {
+  const navigate = useNavigate();
+  const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
+
+  const handleClickBtn = () => {};
+
+  const onClickApplyBtn = () => {
+    setSelectedBtn("faq");
+    navigate("/faq");
+  };
+
   return (
     <StRecruitContainer>
       <StNavBar>
-        <NavBar />
+        <NavBar selectedBtn={selectedBtn} />
       </StNavBar>
       <img src={banner} alt="Banner" />
       <StRecruitTypoWrapper>
@@ -16,6 +43,10 @@ export const Recruit = () => {
         <StRecruitContent>{content}</StRecruitContent>
         <StRecruitFinishMent>{finishment}</StRecruitFinishMent>
         <StSectionTitle>TIMELINE</StSectionTitle>
+        <StTimelineBox>
+          <StTimelineImg src={roadmap0} alt="RoadMap" />
+          <StTimelineImg src={roadmap1} alt="RoadMap" />
+        </StTimelineBox>
         <StSectionTitle>Recruiting Process</StSectionTitle>
         <img src={process} />
       </StRecruitTypoWrapper>
@@ -24,11 +55,34 @@ export const Recruit = () => {
         <StInfoSubtitle>
           숭실대 멋쟁이 사자처럼은 이런 사람들이에요
         </StInfoSubtitle>
+        <AboutUs />
         <StInfoTitle>We are looking for</StInfoTitle>
         <StInfoSubtitle>
           숭실대 멋쟁이 사자처럼은 이런 사람을 원해요
         </StInfoSubtitle>
+        <StTalentedWrapper>
+          <StTalentedBtn onClick={handleClickBtn}>
+            <img src={passion} />
+          </StTalentedBtn>
+          <StTalentedBtn onClick={handleClickBtn}>
+            <img src={cooperation} />
+          </StTalentedBtn>
+          <StTalentedBtn onClick={handleClickBtn}>
+            <img src={responsibility} />
+          </StTalentedBtn>
+        </StTalentedWrapper>
       </StRecruitInfoWrapper>
+      <StRecruitLinkWrapper>
+        <StLinkTitle>
+          지금 바로 <StHighlightText>지원</StHighlightText>
+          하세요
+        </StLinkTitle>
+        <StLinkSubtitle>{linksubtitle}</StLinkSubtitle>
+        <StLinkBtn onClick={onClickApplyBtn}>
+          멋쟁이사자처럼 12기 지원 ▶
+        </StLinkBtn>
+      </StRecruitLinkWrapper>
+      <StLogo src={logo} alt="Logo" />
     </StRecruitContainer>
   );
 };
@@ -37,7 +91,7 @@ const StRecruitContainer = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  margin-top: 6%;
+  margin-top: 7%;
   padding-bottom: 30%;
 `;
 
@@ -51,7 +105,7 @@ const StRecruitTypoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding: 8% 10%;
+  padding: 12% 10%;
 `;
 
 const StRecruitTitle = styled.span`
@@ -71,7 +125,7 @@ const StRecruitContent = styled.span`
 `;
 
 const StRecruitFinishMent = styled.span`
-  padding: 4% 15% 40% 0%;
+  padding: 10% 15% 0% 0%;
   color: #1c1c1c;
   font-size: 2vw;
   font-weight: 500;
@@ -79,12 +133,21 @@ const StRecruitFinishMent = styled.span`
 `;
 
 const StSectionTitle = styled.span`
-  padding: 4% 15% 5% 0%;
+  padding: 30% 15% 5% 0%;
   color: #3274d9;
   font-family: "BowlbyOne";
   font-size: 4vw;
   font-weight: 400;
   line-height: 7vw;
+`;
+
+const StTimelineBox = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const StTimelineImg = styled.img`
+  width: 50%;
 `;
 
 const StRecruitInfoWrapper = styled.div`
@@ -96,7 +159,7 @@ const StRecruitInfoWrapper = styled.div`
 `;
 
 const StInfoTitle = styled.span`
-  padding: 10% 0% 1% 0%;
+  padding: 20% 0% 0% 0%;
   color: #3274d9;
   font-family: "BowlbyOne";
   font-size: 4vw;
@@ -109,4 +172,65 @@ const StInfoSubtitle = styled.span`
   font-size: 2vw;
   font-weight: 500;
   line-height: 7vw;
+  margin-bottom: 5%;
+`;
+
+const StTalentedWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+`;
+
+const StTalentedBtn = styled.button`
+  width: 20vw;
+  height: 20vw;
+`;
+
+const StRecruitLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30%;
+`;
+
+const StLinkTitle = styled.span`
+  color: #1c1c1c;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 900;
+`;
+
+const StHighlightText = styled.span`
+  background-color: #e4efff;
+  color: #3383fe;
+  font-size: 5vw;
+  font-weight: 900;
+`;
+
+const StLinkSubtitle = styled.span`
+  padding-top: 3%;
+  color: #1c1c1c;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: 400;
+  line-height: 4vw;
+`;
+
+const StLinkBtn = styled.button`
+  width: 60vw;
+  margin-top: 5%;
+  padding: 3% 0%;
+  background-color: #3383fe;
+  color: #ffffff;
+  font-size: 2vw;
+  font-weight: 700;
+  border-radius: 2vw;
+`;
+
+const StLogo = styled.img`
+  width: 3vw;
+  margin: 30% 0% 0% 49%;
 `;

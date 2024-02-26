@@ -106,7 +106,7 @@ const GlobalStyleComponent = createGlobalStyle`
     isolation: isolate;
   }
   #root {
-    width: 100vw;
+    width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     min-height: 100vh;
     overflow-x: hidden;
