@@ -205,7 +205,7 @@ export const Home = () => {
             </Member>
             <Member>
               <MemberImg src={hi}/>
-              <MemberName>이해인</MemberName>
+              <MemberName>유해인</MemberName>
               <MemberRole>디자인 파트장</MemberRole>
             </Member>
             <Member>
