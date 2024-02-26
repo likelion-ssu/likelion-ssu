@@ -41,7 +41,7 @@ export const Home = () => {
   const onClickApplyBtn = () => {
     navigate("/recruit");
   };
-  
+
   return (
     <Container>
       <FirstContainer>
@@ -53,83 +53,133 @@ export const Home = () => {
           </FirstTitle>
           <Intro>
             <hr />
-            <p>숭실대학교에서 개발자로 <br /> 성장하는 방법</p>
+            <p>
+              숭실대학교에서 개발자로 <br /> 성장하는 방법
+            </p>
           </Intro>
         </Content>
       </FirstContainer>
       <SecondContainer>
         <TopContents>
-          <SecondTitle>왜, <span>숭실대 멋쟁이사자처럼</span> 인가?</SecondTitle>
+          <SecondTitle>
+            왜, <span>숭실대 멋쟁이사자처럼</span> 인가?
+          </SecondTitle>
           <SecondIntro>
-            2013년, 서울대학교에서 이두희 대표를 필두로 시작된 '멋쟁이사자처럼 대학’은 현재 국내외 121개 대학, 4천여 명이
-            <br />활동하는 국내 최대 규모의 IT 창업 동아리로 자리매김하였습니다. 숭실대 멋쟁이사자처럼은 2021년부터 시작하여
-            <br />지금은 대표적인 IT 동아리로 거듭나, 교내·외 다양한 프로젝트 및 행사를 기획 및 운영하고 있습니다.
+            2013년, 서울대학교에서 이두희 대표를 필두로 시작된 '멋쟁이사자처럼
+            대학’은 현재 국내외 121개 대학, 4천여 명이
+            <br />
+            활동하는 국내 최대 규모의 IT 창업 동아리로 자리매김하였습니다.
+            숭실대 멋쟁이사자처럼은 2021년부터 시작하여
+            <br />
+            지금은 대표적인 IT 동아리로 거듭나, 교내·외 다양한 프로젝트 및
+            행사를 기획 및 운영하고 있습니다.
           </SecondIntro>
         </TopContents>
         <BottomContents>
           <SecondSection>
             <SecondImage01 src={why1} alt="why1" />
             <LottieWrapper>
-              <Lottie
-                loop
-                animationData={why01}
-                play
-              />
+              <Lottie loop animationData={why01} play />
             </LottieWrapper>
           </SecondSection>
           <SecondSection>
             <SecondImage02 src={why2} alt="why2" />
             <LottieWrapper>
-              <Lottie
-                loop
-                animationData={why02}
-                play
-              />
+              <Lottie loop animationData={why02} play />
             </LottieWrapper>
           </SecondSection>
           <SecondSection>
             <SecondImage03 src={why3} alt="why3" />
             <LottieWrapper>
-              <Lottie
-                loop
-                animationData={why03}
-                play
-              />
+              <Lottie loop animationData={why03} play />
             </LottieWrapper>
           </SecondSection>
         </BottomContents>
       </SecondContainer>
       <SecondContainer>
         <TopContents>
-          <SecondTitle>멋사 아래, <span>네 개의 태양<SunImg src={sun}/></span></SecondTitle>
+          <SecondTitle>
+            멋사 아래,{" "}
+            <span>
+              네 개의 태양
+              <SunImg src={sun} />
+            </span>
+          </SecondTitle>
           <SecondIntro2>
             성장을 위한 네 개의 태양이 당신을 기다리고 있어요!
-            <br />당신의 선택은 무엇인가요?
+            <br />
+            당신의 선택은 무엇인가요?
           </SecondIntro2>
         </TopContents>
         <BottomContents02>
           <ButtonWrapper>
-            <RoundButton onClick={() => handleTabClick("PM")} active={activeTab === "PM"}>PM</RoundButton>
-            <RoundButton onClick={() => handleTabClick("Design")} active={activeTab === "Design"}>Design</RoundButton>
-            <RoundButton onClick={() => handleTabClick("Frontend")} active={activeTab === "Frontend"}>Frontend</RoundButton>
-            <RoundButton onClick={() => handleTabClick("Backend")} active={activeTab === "Backend"}>Backend</RoundButton>
+            <RoundButton
+              onClick={() => handleTabClick("PM")}
+              active={activeTab === "PM"}
+            >
+              PM
+            </RoundButton>
+            <RoundButton
+              onClick={() => handleTabClick("Design")}
+              active={activeTab === "Design"}
+            >
+              Design
+            </RoundButton>
+            <RoundButton
+              onClick={() => handleTabClick("Frontend")}
+              active={activeTab === "Frontend"}
+            >
+              Frontend
+            </RoundButton>
+            <RoundButton
+              onClick={() => handleTabClick("Backend")}
+              active={activeTab === "Backend"}
+            >
+              Backend
+            </RoundButton>
           </ButtonWrapper>
           <ContentsWrapper>
             <ImageWrapper>
-              <ContentsImage src={pm} alt="pm" active={activeTab === "PM"}/>
-              <ContentsImage src={design} alt="design" active={activeTab === "Design"}/>
-              <ContentsImage src={fe} alt="fe" active={activeTab === "Frontend"}/>
-              <ContentsImage src={be} alt="be" active={activeTab === "Backend"}/>
+              <ContentsImage src={pm} alt="pm" active={activeTab === "PM"} />
+              <ContentsImage
+                src={design}
+                alt="design"
+                active={activeTab === "Design"}
+              />
+              <ContentsImage
+                src={fe}
+                alt="fe"
+                active={activeTab === "Frontend"}
+              />
+              <ContentsImage
+                src={be}
+                alt="be"
+                active={activeTab === "Backend"}
+              />
             </ImageWrapper>
             {activeTab === "PM" && (
               <ContentsInfo>
                 <InfoTitle>PM part.</InfoTitle>
                 <InfoSub>통찰력 있는 PM으로 성장하기</InfoSub>
                 <InfoContent>
-                  Team Leader로서 프로젝트를 리드하며 서비스 기획자와 PM으로 성장하기 위한 역량을 키울 수 있습니다. 이를 통해 협업에 필요한 내용을 설계하는 경험을 쌓을 수 있습니다.
-                  <br />PM은 프로젝트의 전반적인 일정 관리를 담당하여 원활한 진행과 완료를 보장합니다. 초기에는 요구 사항 수집과 분석을 통해 프로젝트의 방향과 목표를 설정하고, 이를 팀원들과 공유하여 프로젝트의 길잡이 역할을 수행합니다.
-                  <br />와이어프레임 및 플로우차트 등을 작성하여 프로젝트의 구조와 흐름을 시각화하고, 팀원들과 함께 검토하며 최적화하는 역할도 맡습니다. 이를 통해 기획과 디자인 단계에서 효과적인 의사 결정을 도모하고, 개발 단계에서의 문제를 사전에 예방할 수 있습니다.
-                  <br />PM은 팀원들의 역량과 성과를 평가하고 인정하며, 필요한 지원과 교육을 제공하여 팀원들의 성장을 도모합니다. 팀원들의 의견을 수렴하고 존중하여 프로젝트의 성과를 극대화합니다.
+                  Team Leader로서 프로젝트를 리드하며 서비스 기획자와 PM으로
+                  성장하기 위한 역량을 키울 수 있습니다. 이를 통해 협업에 필요한
+                  내용을 설계하는 경험을 쌓을 수 있습니다.
+                  <br />
+                  PM은 프로젝트의 전반적인 일정 관리를 담당하여 원활한 진행과
+                  완료를 보장합니다. 초기에는 요구 사항 수집과 분석을 통해
+                  프로젝트의 방향과 목표를 설정하고, 이를 팀원들과 공유하여
+                  프로젝트의 길잡이 역할을 수행합니다.
+                  <br />
+                  와이어프레임 및 플로우차트 등을 작성하여 프로젝트의 구조와
+                  흐름을 시각화하고, 팀원들과 함께 검토하며 최적화하는 역할도
+                  맡습니다. 이를 통해 기획과 디자인 단계에서 효과적인 의사
+                  결정을 도모하고, 개발 단계에서의 문제를 사전에 예방할 수
+                  있습니다.
+                  <br />
+                  PM은 팀원들의 역량과 성과를 평가하고 인정하며, 필요한 지원과
+                  교육을 제공하여 팀원들의 성장을 도모합니다. 팀원들의 의견을
+                  수렴하고 존중하여 프로젝트의 성과를 극대화합니다.
                 </InfoContent>
               </ContentsInfo>
             )}
@@ -138,23 +188,53 @@ export const Home = () => {
                 <InfoTitle>Design part.</InfoTitle>
                 <InfoSub>통찰력 있는 Design으로 성장하기</InfoSub>
                 <InfoContent>
-                  디자인 툴을 익히고 다양한 웹 디자인 이론과 용어들을 배우며 협업에 도움이 되는 스킬을 키울 수 있습니다. 이를 통해 협업에 필요한 내용들을 설계하는 경험을 할 수 있습니다. 
-                  <br />디자인 파트는 프로젝트의 기획 내용을 기반으로 다양한 디자인 작업을 수행합니다. 주로 서비스 로고, 일러스트레이션, 및 아이콘 및 사용자 인터페이스를 디자인하게 됩니다. 프로젝트의 각 페이지나 화면에 중점을 두어 레이아웃을 설계하고, 모든 디자인 요소를 시각적으로 매력적이고 합리적이게 표현하는 역할을 수행합니다. 
-                  사용자 경험과 사용자 인터페이스에 대한 이해를 기반으로 디자인을 진행하며, 각 요소들의 상호작용과 일관성을 고려하여 사용자들에게 직관적이고 효과적인 환경을 제공합니다. 
-                  <br />또한 기획 및 개발 파트와의 긴밀한 협업으로 피드백을 주고 받으며 프로젝트의 디자인 측면에서 품질을 향상시키려 노력합니다.
+                  디자인 툴을 익히고 다양한 웹 디자인 이론과 용어들을 배우며
+                  협업에 도움이 되는 스킬을 키울 수 있습니다. 이를 통해 협업에
+                  필요한 내용들을 설계하는 경험을 할 수 있습니다.
+                  <br />
+                  디자인 파트는 프로젝트의 기획 내용을 기반으로 다양한 디자인
+                  작업을 수행합니다. 주로 서비스 로고, 일러스트레이션, 및 아이콘
+                  및 사용자 인터페이스를 디자인하게 됩니다. 프로젝트의 각
+                  페이지나 화면에 중점을 두어 레이아웃을 설계하고, 모든 디자인
+                  요소를 시각적으로 매력적이고 합리적이게 표현하는 역할을
+                  수행합니다. 사용자 경험과 사용자 인터페이스에 대한 이해를
+                  기반으로 디자인을 진행하며, 각 요소들의 상호작용과 일관성을
+                  고려하여 사용자들에게 직관적이고 효과적인 환경을 제공합니다.
+                  <br />
+                  또한 기획 및 개발 파트와의 긴밀한 협업으로 피드백을 주고
+                  받으며 프로젝트의 디자인 측면에서 품질을 향상시키려
+                  노력합니다.
                 </InfoContent>
               </ContentsInfo>
             )}
             {activeTab === "Frontend" && (
               <ContentsInfo>
                 <InfoTitle>Frontend part.</InfoTitle>
-                <InfoSub>찐빵의 팥,, 만두의 속,, 김밥의 단무지,, 그리고,, "멋사의 프론트엔드"</InfoSub>
+                <InfoSub>
+                  찐빵의 팥,, 만두의 속,, 김밥의 단무지,, 그리고,, "멋사의
+                  프론트엔드"
+                </InfoSub>
                 <InfoContent>
-                  프론트엔드 파트는 사용자가 직접 상호작용하는 웹 애플리케이션의 인터페이스를 개발하는 중요한 역할을 담당합니다. 사용자 경험(UX)과 사용자 인터페이스(UI) 디자인에 중점을 두며, 서비스의 시각적 요소와 상호작용을 설계하고 구현합니다. 
-                  프론트엔드 개발자는 HTML, CSS, JavaScript 등의 기술을 활용하여 사용자가 웹사이트를 이용할 때 직관적이고 매력적인 사용자 인터페이스를 제공합니다.
-                  <br />프론트엔드 파트는 웹 애플리케이션의 프론트엔드 아키텍처를 설계하고 구축합니다. 최신 프론트엔드 프레임워크와 라이브러리를 활용하여 반응형 및 동적인 웹사이트를 개발합니다. 사용자 경험을 최우선으로 생각하며, 사이트의 접근성과 성능 최적화에도 중점을 둡니다. 
-                  백엔드 파트와 협력하여 API를 통해 데이터를 주고받고, 사용자의 요구사항을 반영한 기능을 구현합니다. 웹 표준과 접근성 가이드라인을 준수하여 모든 사용자가 웹사이트를 원활하게 이용할 수 있도록 보장합니다.
-                  <br />프론트엔드 파트는 숭실대 멋쟁이사자처럼에서 사용자에게 직접적으로 노출되는 서비스의 '얼굴'을 만들어가는 중요한 역할을 수행합니다. 
+                  프론트엔드 파트는 사용자가 직접 상호작용하는 웹 애플리케이션의
+                  인터페이스를 개발하는 중요한 역할을 담당합니다. 사용자
+                  경험(UX)과 사용자 인터페이스(UI) 디자인에 중점을 두며,
+                  서비스의 시각적 요소와 상호작용을 설계하고 구현합니다.
+                  프론트엔드 개발자는 HTML, CSS, JavaScript 등의 기술을 활용하여
+                  사용자가 웹사이트를 이용할 때 직관적이고 매력적인 사용자
+                  인터페이스를 제공합니다.
+                  <br />
+                  프론트엔드 파트는 웹 애플리케이션의 프론트엔드 아키텍처를
+                  설계하고 구축합니다. 최신 프론트엔드 프레임워크와 라이브러리를
+                  활용하여 반응형 및 동적인 웹사이트를 개발합니다. 사용자 경험을
+                  최우선으로 생각하며, 사이트의 접근성과 성능 최적화에도 중점을
+                  둡니다. 백엔드 파트와 협력하여 API를 통해 데이터를 주고받고,
+                  사용자의 요구사항을 반영한 기능을 구현합니다. 웹 표준과 접근성
+                  가이드라인을 준수하여 모든 사용자가 웹사이트를 원활하게 이용할
+                  수 있도록 보장합니다.
+                  <br />
+                  프론트엔드 파트는 숭실대 멋쟁이사자처럼에서 사용자에게
+                  직접적으로 노출되는 서비스의 '얼굴'을 만들어가는 중요한 역할을
+                  수행합니다.
                 </InfoContent>
               </ContentsInfo>
             )}
@@ -163,9 +243,23 @@ export const Home = () => {
                 <InfoTitle>Backend part.</InfoTitle>
                 <InfoSub>통찰력 있는 Backend으로 성장하기</InfoSub>
                 <InfoContent>
-                  서비스의 요구사항에 맞춰 API를 개발하고 배포 및 운영하여 사용자에게 원활한 서비스를 제공합니다. 백엔드 파트는 눈에 보이지 않는 서버를 전반적으로 담당하며, 서비스의 요구사항을 분석하여 웹 애플리케이션을 구현합니다. 또한, 데이터베이스를 설계하고 애플리케이션과 연동하여 데이터를 효율적으로 관리합니다.
-                  <br />백엔드 파트는 웹 애플리케이션의 배포와 유지보수도 담당합니다. 클라우드 컴퓨팅을 통해 애플리케이션과 데이터베이스를 인터넷을 통해 접속할 수 있도록 구성하며, 서비스의 성능과 안정성을 고려하여 서버와 데이터베이스를 구축하고 관리합니다. 또한, 프론트엔드 파트와 PM과 지속적으로 소통하며 원활한 협업을 통해 완성도 있는 서비스를 개발해나갑니다. 
-                  <br />백엔드 파트는 숭실대 멋쟁이사자처럼에서 중요한 역할을 담당하고 있으며, 서비스의 기능과 성능을 지속적으로 향상시키기 위해 노력합니다.
+                  서비스의 요구사항에 맞춰 API를 개발하고 배포 및 운영하여
+                  사용자에게 원활한 서비스를 제공합니다. 백엔드 파트는 눈에
+                  보이지 않는 서버를 전반적으로 담당하며, 서비스의 요구사항을
+                  분석하여 웹 애플리케이션을 구현합니다. 또한, 데이터베이스를
+                  설계하고 애플리케이션과 연동하여 데이터를 효율적으로
+                  관리합니다.
+                  <br />
+                  백엔드 파트는 웹 애플리케이션의 배포와 유지보수도 담당합니다.
+                  클라우드 컴퓨팅을 통해 애플리케이션과 데이터베이스를 인터넷을
+                  통해 접속할 수 있도록 구성하며, 서비스의 성능과 안정성을
+                  고려하여 서버와 데이터베이스를 구축하고 관리합니다. 또한,
+                  프론트엔드 파트와 PM과 지속적으로 소통하며 원활한 협업을 통해
+                  완성도 있는 서비스를 개발해나갑니다.
+                  <br />
+                  백엔드 파트는 숭실대 멋쟁이사자처럼에서 중요한 역할을 담당하고
+                  있으며, 서비스의 기능과 성능을 지속적으로 향상시키기 위해
+                  노력합니다.
                 </InfoContent>
               </ContentsInfo>
             )}
@@ -181,66 +275,75 @@ export const Home = () => {
           </Years>
         </YearsWrapper>
         <MembersWrapper>
-          <MemberTitle><hr/>CORE LEAD</MemberTitle>
+          <MemberTitle>
+            <hr />
+            CORE LEAD
+          </MemberTitle>
           <Members>
             <Member>
-              <MemberImg src={sh}/>
+              <MemberImg src={sh} />
               <MemberName>유승한</MemberName>
               <MemberRole>12기 대표</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={je}/>
+              <MemberImg src={je} />
               <MemberName>김지은</MemberName>
               <MemberRole>12기 부대표</MemberRole>
             </Member>
           </Members>
-          <MemberTitle><hr/>TECH LEAD</MemberTitle>
+          <MemberTitle>
+            <hr />
+            TECH LEAD
+          </MemberTitle>
           <Members>
             <Member>
-              <MemberImg src={em}/>
+              <MemberImg src={em} />
               <MemberName>정의민</MemberName>
               <MemberRole>기획 파트장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={hi}/>
+              <MemberImg src={hi} />
               <MemberName>유해인</MemberName>
               <MemberRole>디자인 파트장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={sy}/>
+              <MemberImg src={sy} />
               <MemberName>신수연</MemberName>
               <MemberRole>프론트엔드 파트장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={sy1}/>
+              <MemberImg src={sy1} />
               <MemberName>박수영</MemberName>
               <MemberRole>백엔드 파트장</MemberRole>
             </Member>
           </Members>
-          <MemberTitle><hr/>OPERATIONS MANAGEMENT</MemberTitle>
+          <MemberTitle>
+            <hr />
+            OPERATIONS MANAGEMENT
+          </MemberTitle>
           <Members>
             <Member>
-              <MemberImg src={jw}/>
+              <MemberImg src={jw} />
               <MemberName>한지원</MemberName>
               <MemberRole>기획 팀장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={gh}/>
+              <MemberImg src={gh} />
               <MemberName>김교휘</MemberName>
               <MemberRole>운영 팀장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={sm}/>
+              <MemberImg src={sm} />
               <MemberName>조수민</MemberName>
               <MemberRole>홍보 팀장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={hs}/>
+              <MemberImg src={hs} />
               <MemberName>강해솔</MemberName>
               <MemberRole>디자인 팀장</MemberRole>
             </Member>
             <Member>
-              <MemberImg src={ye}/>
+              <MemberImg src={ye} />
               <MemberName>오유은</MemberName>
               <MemberRole>총무</MemberRole>
             </Member>
@@ -248,17 +351,28 @@ export const Home = () => {
         </MembersWrapper>
       </ThirdContainer>
       <SecondContainer>
-        <SecondTitle>지금 바로 <span><Jiwon href="https://github.com/7iw8n">지원</Jiwon></span>하세요!</SecondTitle>
+        <SecondTitle>
+          지금 바로{" "}
+          <span>
+            <Jiwon href="https://github.com/7iw8n">지원</Jiwon>
+          </span>
+          하세요!
+        </SecondTitle>
         <RecruitSub>
           Possibility to Reality
           <br />내 아이디어를 내 손으로 실현하자!
         </RecruitSub>
-        <RecruitButton onClick={onClickApplyBtn}>12기 지원하러 가기<Arrow src={arrow}/></RecruitButton>
+        <RecruitButton onClick={onClickApplyBtn}>
+          12기 지원하러 가기
+          <Arrow src={arrow} />
+        </RecruitButton>
       </SecondContainer>
       <FourthContainer>
         <LastWrapper>
           <LikeLionTitle>
-            숭실대학교 <br />멋쟁이사자처럼 <br />12TH
+            숭실대학교 <br />
+            멋쟁이사자처럼 <br />
+            12TH
           </LikeLionTitle>
           <ImgSource src={techit} />
         </LastWrapper>
@@ -270,9 +384,12 @@ export const Home = () => {
           <SNSInfo>숭실대학교 멋쟁이사자처럼</SNSInfo>
           <SNSInfo>
             <span>Contact</span>
-            <br/>숭실대학교 멋쟁이자사처럼 대표. 유승한
-            <br />Email: ssu@likelion.org
-            <br />IG: @likelion_ssu
+            <br />
+            숭실대학교 멋쟁이자사처럼 대표. 유승한
+            <br />
+            Email: ssu@likelion.org
+            <br />
+            IG: @likelion_ssu
           </SNSInfo>
           <SNSInfo>Copyright LIKELION SSU</SNSInfo>
         </ContactWrapper>
@@ -317,7 +434,7 @@ const Main = styled.img`
 `;
 
 const Content = styled.div`
-  color: #3383FE;
+  color: #3383fe;
   width: 60%;
   display: flex;
   align-items: start;
@@ -333,7 +450,7 @@ const FirstTitle = styled.div`
   font-size: 3.3rem;
   font-weight: 800;
   p {
-    margin: 0;;
+    margin: 0;
   }
   :nth-child(2) {
     font-size: 1.9rem;
@@ -344,7 +461,6 @@ const FirstTitle = styled.div`
     width: 100%;
   }
 `;
-
 
 const Intro = styled.div`
   display: flex;
@@ -357,7 +473,7 @@ const Intro = styled.div`
   line-height: 3.2rem;
   hr {
     width: 100%;
-    border: 1.5px solid #3383FE;
+    border: 1.5px solid #3383fe;
     margin: 2.4rem 0 1.5rem 0;
   }
   @media (max-width: 768px) {
@@ -389,8 +505,8 @@ const SecondTitle = styled.div`
   font-weight: 800;
   margin: 0;
   span {
-    color: #3383FE;
-    background-color: #E4EFFF;
+    color: #3383fe;
+    background-color: #e4efff;
   }
 `;
 
@@ -400,11 +516,11 @@ const SunImg = styled.img`
   height: auto;
   margin: 0 0 -0.35rem 0.5rem;
   padding: 0;
-`
+`;
 
 const SecondIntro = styled.div`
   font-family: "SUIT";
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
   line-height: 1.7rem;
@@ -421,7 +537,7 @@ const SecondIntro = styled.div`
 `;
 
 const SecondIntro2 = styled.div`
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
   line-height: 1.7rem;
@@ -496,7 +612,7 @@ const LottieWrapper = styled.div`
 const ButtonWrapper = styled.div`
   width: 36rem;
   height: 2.4rem;
-  border: 2.5px solid #3383FE;
+  border: 2.5px solid #3383fe;
   border-radius: 10rem;
   display: flex;
   flex-direction: row;
@@ -517,11 +633,13 @@ const RoundButton = styled.button<RoundButtonProps>`
   width: 8.85rem;
   height: 1.9rem;
   border-radius: 10rem;
-  color: #3383FE;
+  color: #3383fe;
   font-size: 1rem;
-  font-weight: 700;  
+  font-weight: 700;
   cursor: pointer;
-  ${({ active }) => active && `
+  ${({ active }) =>
+    active &&
+    `
     background-color: #3383FE;
     color: white;
   `}
@@ -562,7 +680,9 @@ const ContentsImage = styled.img<RoundButtonProps>`
   filter: brightness(35%);
   object-fit: cover;
   transition: filter 1s ease-in-out;
-  ${({ active }) => active && `
+  ${({ active }) =>
+    active &&
+    `
     filter: brightness(100%);
   `}
 `;
@@ -583,7 +703,7 @@ const ContentsInfo = styled.div`
 `;
 
 const InfoTitle = styled.div`
-  color: #3383FE;
+  color: #3383fe;
   font-size: 2rem;
   font-weight: 700;
   @media (max-width: 768px) {
@@ -593,7 +713,7 @@ const InfoTitle = styled.div`
 
 const InfoSub = styled.div`
   font-family: "SUIT";
-  color: #3383FE;
+  color: #3383fe;
   font-size: 1rem;
   font-weight: 600;
   margin-top: 0.2rem;
@@ -734,7 +854,7 @@ const MemberRole = styled.div`
 
 const Jiwon = styled.a`
   text-decoration: none;
-  color: #3383FE;
+  color: #3383fe;
   cursor: pointer;
 `;
 
@@ -751,8 +871,8 @@ const RecruitSub = styled.div`
 const RecruitButton = styled.button`
   font-family: "SUIT";
   font-size: 1.1rem;
-  background-color: #3383FE;
-  width: 26rem;
+  background-color: #3383fe;
+  width: 30rem;
   height: 4rem;
   border-radius: 1rem;
   display: flex;
@@ -797,7 +917,7 @@ const ContactWrapper = styled.div`
   font-family: "SUIT";
   font-size: 1rem;
   font-weight: 400;
-  color: #7A7A7A;
+  color: #7a7a7a;
   @media (max-width: 768px) {
     width: 100%;
     font-size: 1.2rem;
@@ -807,7 +927,7 @@ const ContactWrapper = styled.div`
 const SNSWrapper = styled.div`
   display: flex;
   gap: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 8rem 0 1rem 0;
 `;
 
 const SNS = styled.img`
@@ -835,7 +955,7 @@ const LastWrapper = styled.div`
 const LikeLionTitle = styled.div`
   font-size: 2.5rem;
   font-weight: 800;
-  color: #3383FE;
+  color: #3383fe;
   margin-bottom: 3rem;
   @media (max-width: 768px) {
     font-size: 2.7rem;
