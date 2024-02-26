@@ -55,13 +55,17 @@ export const Recruit = () => {
       <StRecruitInfoWrapper>
         <StInfoTitle>ABOUT US</StInfoTitle>
         <StInfoSubtitle>
-          숭실대 멋쟁이 사자처럼은 이런 사람들이에요
+          숭실대 멋쟁이사자처럼은 이런 사람들이에요
         </StInfoSubtitle>
-        <AboutUs />
+        <StAboutUs>
+          <AboutUs />
+        </StAboutUs>
         <StInfoTitle>We are looking for</StInfoTitle>
         <StInfoSubtitle>
-          숭실대 멋쟁이 사자처럼은 이런 사람을 원해요
+          숭실대 멋쟁이사자처럼은 이런 사람을 원해요
         </StInfoSubtitle>
+        <StInfoSubtitleDetail>Click Below!</StInfoSubtitleDetail>
+
         <StTalentedWrapper>
           <StTalentedBtn
             onClick={() => handleTalentClick("passion")}
@@ -200,11 +204,22 @@ const StInfoTitle = styled.span`
 `;
 
 const StInfoSubtitle = styled.span`
+  padding: 2% 0% 1.5% 0%;
   color: #3274d9;
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: 500;
-  line-height: 7vw;
-  margin-bottom: 5%;
+  line-height: 5vw;
+`;
+
+const StInfoSubtitleDetail = styled.span`
+  padding: 0% 0% 0.5% 0%;
+  color: #90b2e6;
+  font-size: 2.5vw;
+  font-weight: 500;
+`;
+
+const StAboutUs = styled.div`
+  margin-top: 5%;
 `;
 
 const StTalentedWrapper = styled.div`
@@ -213,6 +228,7 @@ const StTalentedWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 4%;
   gap: 8vw;
 `;
 
