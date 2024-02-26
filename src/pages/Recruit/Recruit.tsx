@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   banner,
   process,
@@ -66,22 +66,29 @@ export const Recruit = () => {
           <StTalentedBtn
             onClick={() => handleTalentClick("passion")}
             $isSelected={selectedTalent === "passion"}
+            whileTap={{ scale: 0.9, y: -5 }}
           >
-            <img src={selectedTalent === "passion" ? passionblue : passion} />
+            <motion.img
+              src={selectedTalent === "passion" ? passionblue : passion}
+              alt="passion"
+            />
           </StTalentedBtn>
           <StTalentedBtn
             onClick={() => handleTalentClick("cooperation")}
             $isSelected={selectedTalent === "cooperation"}
+            whileTap={{ scale: 1.1, y: 5 }}
           >
             <img
               src={
                 selectedTalent === "cooperation" ? cooperationblue : cooperation
               }
+              alt="cooperation"
             />
           </StTalentedBtn>
           <StTalentedBtn
             onClick={() => handleTalentClick("responsibility")}
             $isSelected={selectedTalent === "responsibility"}
+            whileTap={{ scale: 0.9, y: -5 }}
           >
             <img
               src={
@@ -89,6 +96,7 @@ export const Recruit = () => {
                   ? responsibilityblue
                   : responsibility
               }
+              alt="responsibility"
             />
           </StTalentedBtn>
         </StTalentedWrapper>
@@ -207,9 +215,9 @@ const StTalentedWrapper = styled.div`
   gap: 8vw;
 `;
 
-const StTalentedBtn = styled.button<{ $isSelected: boolean }>`
-  width: 20vw;
-  height: 20vw;
+const StTalentedBtn = styled(motion.button)<{ $isSelected: boolean }>`
+  width: 22vw;
+  height: 22vw;
 `;
 
 const StRecruitLinkWrapper = styled.div`

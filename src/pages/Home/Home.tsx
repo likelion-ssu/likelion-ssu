@@ -302,13 +302,8 @@ export const Home = () => {
               <MemberRole>기획 파트장</MemberRole>
             </Member>
             <Member>
-<<<<<<< HEAD
               <MemberImg src={hi} />
-              <MemberName>이해인</MemberName>
-=======
-              <MemberImg src={hi}/>
               <MemberName>유해인</MemberName>
->>>>>>> main
               <MemberRole>디자인 파트장</MemberRole>
             </Member>
             <Member>
@@ -877,7 +872,7 @@ const RecruitButton = styled.button`
   font-family: "SUIT";
   font-size: 1.1rem;
   background-color: #3383fe;
-  width: 26rem;
+  width: 30rem;
   height: 4rem;
   border-radius: 1rem;
   display: flex;
@@ -932,7 +927,7 @@ const ContactWrapper = styled.div`
 const SNSWrapper = styled.div`
   display: flex;
   gap: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 8rem 0 1rem 0;
 `;
 
 const SNS = styled.img`
