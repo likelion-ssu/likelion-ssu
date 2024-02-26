@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import NavBar from "../../components/NavBar";
+// import NavBar from "../../components/NavBar";
 import banner from "../../assets/News/banner.png";
 
 export const News = () => {
@@ -7,9 +7,7 @@ export const News = () => {
 
   return (
     <StRecruitContainer>
-      <StNavBar>
-        <NavBar />
-      </StNavBar>
+      <StNavBar>{/* <NavBar /> */}</StNavBar>
       <StBanner src={banner} alt="Banner"></StBanner>
       <StBannerTypo>{BannerTypo}</StBannerTypo>
     </StRecruitContainer>
