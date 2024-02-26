@@ -651,7 +651,7 @@ const Years = styled.div`
 `;
 
 const Year = styled.div`
-  
+  font-family: "SUIT";
 `;
 
 const MembersWrapper = styled.div`
