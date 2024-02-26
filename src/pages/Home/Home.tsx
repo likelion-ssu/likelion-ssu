@@ -30,14 +30,18 @@ import nexon from "../../assets/Home/nexon.png";
 import s from "../../assets/Home/s.png";
 import insta from "../../assets/Home/instagram.png";
 import git from "../../assets/Home/github.png";
-
-
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const [activeTab, setActiveTab] = useState<string>("PM");
+  const navigate = useNavigate();
 
   const handleTabClick = (tabName: string) => {
     setActiveTab(tabName === activeTab ? "PM" : tabName);
+  };
+
+  const onClickApplyBtn = () => {
+    navigate("/recruit");
   };
   
   return (
@@ -251,7 +255,7 @@ export const Home = () => {
           Possibility to Reality
           <br />내 아이디어를 내 손으로 실현하자!
         </RecruitSub>
-        <RecruitButton>12기 지원하러 가기<Arrow src={arrow}/></RecruitButton>
+        <RecruitButton onClick={onClickApplyBtn}>12기 지원하러 가기<Arrow src={arrow}/></RecruitButton>
       </SecondContainer>
       <FourthContainer>
         <LastWrapper>

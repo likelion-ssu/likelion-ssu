@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 // import { mq } from "./token";
-import BowlbyOne from "../assets/fonts/BowlbyOneSC-Regular.ttf";
+import BowlbyOne from "../assets/fonts/BowlbyOne-Regular.ttf";
 
 export const GlobalStyle = () => {
   return <GlobalStyleComponent />;
