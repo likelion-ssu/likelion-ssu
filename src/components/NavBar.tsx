@@ -1,30 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import bluelogo from "../assets/Recruit/logo-blue.png";
 
-interface NavBarProps {
-  selectedBtn: string;
-}
-
-const NavBar = ({ selectedBtn }: NavBarProps) => {
+const NavBar = () => {
   const navigate = useNavigate();
-  const [isSelectedBtn, setIsSelectedBtn] = useState<string>(
-    selectedBtn || "recruit"
-  );
+  const [selectedBtn, setSelectedBtn] = useState<string>("");
 
-  useEffect(() => {
-    setIsSelectedBtn(selectedBtn || "recruit");
-  }, [selectedBtn]);
-
-  const handleClickBtn = (selected: "" | "recruit" | "faq") => {
-    setIsSelectedBtn(selected);
+  const handleClickBtn = (selected: "home" | "recruit" | "faq") => {
+    setSelectedBtn(selected);
     navigate(`/${selected}`);
   };
-
-  useEffect(() => {
-    setIsSelectedBtn(selectedBtn);
-  }, [selectedBtn]);
 
   return (
     <StNavContainer>
@@ -32,21 +18,21 @@ const NavBar = ({ selectedBtn }: NavBarProps) => {
       <StNavWrapper>
         <StNavBtn
           type="button"
-          isSelected={isSelectedBtn === "home"}
-          onClick={() => handleClickBtn("")}
+          isSelected={selectedBtn === "home"}
+          onClick={() => handleClickBtn("home")}
         >
           HOME
         </StNavBtn>
         <StNavBtn
           type="button"
-          isSelected={isSelectedBtn === "recruit"}
+          isSelected={selectedBtn === "recruit"}
           onClick={() => handleClickBtn("recruit")}
         >
           RECRUIT
         </StNavBtn>
         <StNavBtn
           type="button"
-          isSelected={isSelectedBtn === "faq"}
+          isSelected={selectedBtn === "faq"}
           onClick={() => handleClickBtn("faq")}
         >
           FAQ
