@@ -5,12 +5,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Recruit />} />
+        <Route path="/" element={<Home />} />
         {/*<Route path="/news" element={<News />} />*/}
         {/*<Route path="/project" element={<Project />} />*/}
         <Route path="/recruit" element={<Recruit />} />
         <Route path="/faq" element={<Faq />} />
-        {/* <Route path="/*" element={<Home />} /> */}
+        <Route path="/*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
