@@ -26,8 +26,6 @@ import hs from "../../assets/Home/hs.png";
 import ye from "../../assets/Home/ye.png";
 import arrow from "../../assets/Home/arrow.png";
 import techit from "../../assets/Home/techit.png";
-import nexon from "../../assets/Home/nexon.png";
-import s from "../../assets/Home/s.png";
 import insta from "../../assets/Home/instagram.png";
 import git from "../../assets/Home/github.png";
 import { useNavigate } from "react-router-dom";
@@ -382,8 +380,6 @@ export const Home = () => {
             12TH
           </LikeLionTitle>
           <ImgSource src={techit} />
-          <ImgSource src={nexon} />
-          <ImgSource src={s} />
         </LastWrapper>
         <ContactWrapper>
           <SNSWrapper>
@@ -936,7 +932,7 @@ const ContactWrapper = styled.div`
 const SNSWrapper = styled.div`
   display: flex;
   gap: 1rem;
-  margin: 8rem 0 1rem 0;
+  margin: 0 0 1rem 0;
 `;
 
 const SNS = styled.img`
