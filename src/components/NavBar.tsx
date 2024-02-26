@@ -7,7 +7,7 @@ const NavBar = () => {
   const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
 
   const handleClickBtn = (
-    selected: "home" | "project" | "story" | "recruit" | "faq"
+    selected: "" | "project" | "story" | "recruit" | "faq"
   ) => {
     setSelectedBtn(selected);
     navigate(`/${selected}`);
@@ -19,7 +19,7 @@ const NavBar = () => {
         <StNavBtn
           type="button"
           isSelected={selectedBtn === "home"}
-          onClick={() => handleClickBtn("home")}
+          onClick={() => handleClickBtn("")}
         >
           HOME
         </StNavBtn>

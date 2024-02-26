@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { mq } from "./token";
+// import { mq } from "./token";
 import BowlbyOne from "../assets/fonts/BowlbyOneSC-Regular.ttf";
 
 export const GlobalStyle = () => {
@@ -27,23 +27,35 @@ const GlobalStyleComponent = createGlobalStyle`
   html,
   body {
     height: 100%;
-    font-size: 7.5px;
 
-    ${mq[2]} {
-      font-size: 8px;
-    }
-    ${mq[4]} {
+    /* 미디어 쿼리에 따른 폰트 크기 설정 */
+    @media (max-width: 400px) {
       font-size: 9px;
     }
-    ${mq[6]} {
-      font-size: 10px;
+    @media (min-width: 401px) and (max-width: 480px) {
+      font-size: 11px;
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 12px;
+    }
+    @media (min-width: 769px) and (max-width: 1023px) {
+      font-size: 14px;
+    }
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1440px) and (max-width: 1919px) {
+      font-size: 18px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 21px;
     }
   }
   @font-face {
 	font-family: "BowlbyOne";
 	src: url(${BowlbyOne});
-}
-  body {
+  }
+  body, button {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family:
@@ -101,5 +113,50 @@ const GlobalStyleComponent = createGlobalStyle`
   }
   span {
     white-space: pre-line;
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 100;
+    src: local('SUIT Thin'), url('./font/suit/SUIT-Thin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 200;
+    src: local('SUIT ExtraLight'), url('./font/suit/SUIT-ExtraLight.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 300;
+    src: local('SUIT Light'), url('./SUIT-Light.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 400;
+    src: local('SUIT Regular'), url('./font/suit/SUIT-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 500;
+    src: local('SUIT Medium'), url('./font/suit/SUIT-Medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 600;
+    src: local('SUIT SemiBold'), url('./font/suit/SUIT-SemiBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 700;
+    src: local('SUIT Bold'), url('./font/suit/SUIT-Bold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 800;
+    src: local('SUIT ExtraBold'), url('./font/suit/SUIT-ExtraBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'SUIT';
+    font-weight: 900;
+    src: local('SUIT Heavy'), url('./font/suit/SUIT-Heavy.woff2') format('woff2');
   }
 `;
