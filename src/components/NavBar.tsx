@@ -17,7 +17,7 @@ const NavBar = ({ selectedBtn }: NavBarProps) => {
     setIsSelectedBtn(selectedBtn || "recruit");
   }, [selectedBtn]);
 
-  const handleClickBtn = (selected: "home" | "recruit" | "faq") => {
+  const handleClickBtn = (selected: "" | "recruit" | "faq") => {
     setIsSelectedBtn(selected);
     navigate(`/${selected}`);
   };
@@ -33,7 +33,7 @@ const NavBar = ({ selectedBtn }: NavBarProps) => {
         <StNavBtn
           type="button"
           isSelected={isSelectedBtn === "home"}
-          onClick={() => handleClickBtn("home")}
+          onClick={() => handleClickBtn("")}
         >
           HOME
         </StNavBtn>
