@@ -5,7 +5,7 @@ import styled from "styled-components";
  */
 export const Colors = {
   primary: '#3383FE',
-  bluewhite: '#F8FAFC',
+  bluewhite: '#F4F8FF',
   solidWhite: '#FDFDFF',
   grey100: '#C4C4C4',
   grey200: '#909090',
