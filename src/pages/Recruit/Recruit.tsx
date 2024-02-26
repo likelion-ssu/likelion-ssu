@@ -122,6 +122,7 @@ const StRecruitContainer = styled.div`
   flex-direction: column;
   margin-top: 7%;
   padding-bottom: 30%;
+  background-color: #f4f8ff;
 `;
 
 const StNavBar = styled.div`
