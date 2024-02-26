@@ -385,7 +385,7 @@ export const Home = () => {
           <SNSInfo>
             <span>Contact</span>
             <br />
-            숭실대학교 멋쟁이자사처럼 대표. 유승한
+            숭실대학교 멋쟁이사자처럼 대표. 유승한
             <br />
             Email: ssu@likelion.org
             <br />
@@ -855,7 +855,6 @@ const MemberRole = styled.div`
 const Jiwon = styled.a`
   text-decoration: none;
   color: #3383fe;
-  cursor: pointer;
 `;
 
 const RecruitSub = styled.div`
