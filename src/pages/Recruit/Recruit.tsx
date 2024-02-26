@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 import { useNavigate } from "react-router-dom";
@@ -22,17 +23,19 @@ import AboutUs from "../../components/AboutUs";
 
 export const Recruit = () => {
   const navigate = useNavigate();
+  const [selectedBtn, setSelectedBtn] = useState<string>("recruit");
 
   const handleClickBtn = () => {};
 
   const onClickApplyBtn = () => {
-    navigate("/faq", { state: { selectedBtn: "faq" } });
+    setSelectedBtn("faq");
+    navigate("/faq");
   };
 
   return (
     <StRecruitContainer>
       <StNavBar>
-        <NavBar />
+        <NavBar selectedBtn={selectedBtn} />
       </StNavBar>
       <img src={banner} alt="Banner" />
       <StRecruitTypoWrapper>
